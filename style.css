@@ -1,0 +1,908 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Rubik:wght@300;400;600&display=swap');
+:root {
+    --navbg:#F9C80E;
+    --navcolor:#00040B;
+    --btnbg: #011638;
+    --searchicon: #303230;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background: #EFF9F0;
+    font-family: 'Open Sans', sans-serif;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  header {
+    height: 89px;
+    background: var(--navbg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4.5rem ;
+  }
+  header h5 {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--navcolor);
+  }
+  header nav {
+    display: flex;
+    gap: 4rem;
+  }
+  header nav li{
+    list-style: none;
+  }
+  header nav li a {
+    text-decoration: none;
+    color: var(--navcolor);
+  }
+  .search {
+    padding: 2rem 4.5rem;
+  }
+  .search-container {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Adjust as needed */
+    margin: 0 auto;
+    height: 69px;
+    border-radius: 10px;
+    background: var(--neutral20, #FAFDFA);
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.08);
+}
+
+/* Style for the search input field */
+.search-input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+/* Style for the search button */
+.search-button {
+    padding: 13px 30px;
+    background-color: var(--btnbg);
+    color: #fff;
+    border: 1px solid var(--btnbg);
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Style for the search icon */
+.search-icon {
+    padding: 10px;
+    background-color: #ffff;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+/* Align the search icon and button with the input field */
+.search-icon, .search-button {
+    display: flex;
+    align-items: center;
+}
+.search .search_footer {
+    text-align: center;
+}
+.search p {
+    color: var(--primary60, #011638);
+    font-family: Open Sans;
+    font-size: 12px;
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/* hero section */
+.hero {
+    margin: 2.5rem 4rem;
+}
+.hero .hero_content {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.img_container{
+    width: 50%;
+}
+.content_container{
+    width: 50%;
+}
+.hero .hero_content h2 {
+    color: var(--primary110, #00040B);
+    font-family: Open Sans;
+    margin-bottom: 1rem;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    text-transform: capitalize;
+}
+.hero .hero_content p {
+    width: 100%;
+    height: 283px;
+    flex-shrink: 0;
+    color: var(--primary110, #00040B);
+    font-family: Open Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+}
+.hero .hero_content p span {
+    color: var(--primary60, #011638);
+    font-family: Open Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 35px;
+}
+
+.popular_postcodes{
+    margin: 2.5rem 4rem;
+}
+.popular_postcodes h2 {
+    color: #000;
+    font-family: Open Sans;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    text-transform: capitalize;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px auto;
+    background: #FFF;
+}
+
+th, td {
+    border: none;
+    text-align: left;
+    padding: .5rem 3rem ;
+}
+tbody tr:nth-child(odd) {
+    background: var(--secondary10, #FEF4CF); /* You can change this background color */
+}
+tbody tr:first-child {
+    margin-top: 2rem;
+}
+
+.popular_postcodes thead {
+    width: 100%;
+    height: 85px;
+    border-radius: 8px 8px 0px 0px;
+    background: var(--secondary60, #F9C80E);
+    flex-shrink: 0;
+}
+.popular_postcodes thead tr .filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: .5rem;
+}
+
+.map {
+    margin: 2.5rem 4rem;
+}
+
+.map .map_content {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.map .map_content h2 {
+    color: var(--primary110, #00040B);
+    font-family: Open Sans;
+    margin-bottom: 1rem;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    text-transform: capitalize;
+}
+.map .map_content p {
+    width: 100%;
+    height: 283px;
+    flex-shrink: 0;
+    color: var(--primary110, #00040B);
+    font-family: Open Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+}
+
+footer {
+    background: var(--primary110, #00040B);
+    height: 373px;
+}
+.footer_container {
+    width: 70%;
+    color: #FFF;
+    padding: 2rem 4.5rem;
+}
+.footer_flex {
+    display: flex;
+    justify-content: space-between;
+}
+.footer_flex .search_postcode h3 {
+    font-family: Open Sans;
+    font-size: 24px;
+    padding-bottom: .5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+.footer_flex .search_postcode a {
+    font-family: Open Sans;
+    font-size: 16px;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    padding: .5rem 0;
+    text-decoration: none;
+    color: #FFF;
+}
+.footer_flex .find_maps h3 {
+    font-family: Open Sans;
+    font-size: 24px;
+    padding-bottom: .5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+.footer_flex .find_maps a {
+    font-family: Open Sans;
+    font-size: 16px;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    padding: .5rem 0;
+    text-decoration: none;
+    color: #FFF;
+}
+.footer_flex .legals h3 {
+    font-family: Open Sans;
+    font-size: 24px;
+    padding-bottom: .5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+.footer_flex .legals a {
+    font-family: Open Sans;
+    font-size: 16px;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    padding: .5rem 0;
+    text-decoration: none;
+    color: #FFF;
+}
+footer .goodstuff {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: #FFF;
+    margin: 0;
+    position: relative;
+    height: 150px;
+}
+footer .goodstuff p{
+    position: absolute;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    
+    bottom: 0;
+    margin: 0 auto;
+}
+footer .goodstuff span {
+    color: var(--navbg);
+}
+/* Responsiveness */
+@media(max-width: 769px){
+    header {
+        height: 60px;
+        background: var(--navbg);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 3rem ;
+      }
+      header h5 {
+        font-size: 18px;
+      }
+      header nav {
+        display: flex;
+        gap: 1rem;
+      }
+      header nav li a {
+        font-size: 16px;
+      }
+
+      .search {
+        padding: 1.5rem 3rem;
+      }
+      .search-container { /* Adjust as needed */
+        margin: 0 auto;
+        height: 50px;
+    }
+    /* Style for the search input field */
+    .search-input {
+        width: 100%;
+        padding: 10px;
+    }
+    /* Style for the search button */
+    .search-button {
+        padding: 10px 25px;
+        background-color: var(--btnbg);
+        color: #fff;
+        border: 1px solid var(--btnbg);
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        outline: none;
+    }
+    /* Style for the search icon */
+    .search-icon {
+        padding: 8px;
+    }
+    .search p {
+        font-size: 10px;
+    }
+    
+    .hero {
+        margin: 1.5rem 3rem;
+    }
+    .hero .hero_content {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .img_container{
+        width: 80%;
+    }
+    .content_container{
+        width: 80%;
+    }
+    .hero .hero_content h2 {
+        font-size: 20px;
+    }
+    .hero .hero_content p {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px;
+        height: 210px;
+    }
+    .hero .hero_content p span {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 25px;
+    }
+
+    .map {
+        margin: 1.5rem 3rem;
+    }
+    
+    .map .map_content {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .map .map_content h2 {
+        font-size: 20px;
+    }
+    .map .map_content p {
+        width: 100%;
+        height: 150px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+    }
+    
+    footer {
+        background: var(--primary110, #00040B);
+        height: 373px;
+    }
+    .footer_container {
+        width: 100%;
+        color: #FFF;
+        padding: 1.5rem 3rem;
+    }
+    .footer_flex {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer_flex .search_postcode h3 {
+        font-family: Open Sans;
+        font-size: 18px;
+        padding-bottom: .5rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+    }
+    .footer_flex .search_postcode a {
+        font-family: Open Sans;
+        font-size: 14px;
+        cursor: pointer;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 10px;
+        padding: .5rem 0;
+        text-decoration: none;
+        color: #FFF;
+    }
+    .footer_flex .find_maps h3 {
+        font-family: Open Sans;
+        font-size: 18px;
+        padding-bottom: .5rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+    }
+    .footer_flex .find_maps a {
+        font-family: Open Sans;
+        font-size: 14px;
+        cursor: pointer;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 12px;
+        padding: .5rem 0;
+        text-decoration: none;
+        color: #FFF;
+    }
+    .footer_flex .legals h3 {
+        font-family: Open Sans;
+        font-size: 18px;
+        padding-bottom: .5rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+    }
+    .footer_flex .legals a {
+        font-family: Open Sans;
+        font-size: 14px;
+        cursor: pointer;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 12px;
+        padding: .5rem 0;
+        text-decoration: none;
+        color: #FFF;
+    }
+    footer .goodstuff {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        color: #FFF;
+        margin: 0;
+        position: relative;
+        height: 150px;
+    }
+    footer .goodstuff p{
+        position: absolute;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        
+        bottom: 0;
+        margin: 0 auto;
+    }
+    footer .goodstuff span {
+        color: var(--navbg);
+    }
+}
+@media(max-width: 426px){
+    header {
+        height: 60px;
+        background: var(--navbg);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem ;
+      }
+      header h5 {
+        font-size: 16px;
+      }
+      header nav {
+        display: none;
+      }
+      header nav li a {
+        font-size: 16px;
+      }
+
+      .search {
+        padding: 1rem 2rem;
+      }
+      .search-container { /* Adjust as needed */
+        margin: 0 auto;
+        height: 40px;
+    }
+    /* Style for the search input field */
+    .search-input {
+        width: 100%;
+        padding: 8px;
+    }
+    /* Style for the search button */
+    .search-button {
+        padding: 8px 25px;
+        background-color: var(--btnbg);
+        color: #fff;
+        border: 1px solid var(--btnbg);
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        outline: none;
+    }
+    /* Style for the search icon */
+    .search-icon {
+        padding: 8px;
+    }
+    .search p {
+        font-size: 10px;
+    }
+    
+    .hero {
+        margin: 1rem 2rem;
+    }
+    .hero .hero_content {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .img_container{
+        width: 100%;
+    }
+    .content_container{
+        width: 100%;
+    }
+    .hero .hero_content h2 {
+        font-size: 18px;
+    }
+    .hero .hero_content p {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        height: 200px;
+    }
+    .hero .hero_content p span {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 25px;
+    }
+
+    .popular_postcodes{
+        margin: 2rem 2rem;
+    }
+    .popular_postcodes h2 {
+        color: #000;
+        font-family: Open Sans;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+        text-transform: capitalize;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 20px auto;
+        background: #FFF;
+    }
+    
+    th, td {
+        border: none;
+        text-align: left;
+        padding: .5rem 2rem ;
+    }
+    tbody tr:nth-child(odd) {
+        background: var(--secondary10, #FEF4CF); /* You can change this background color */
+    }
+    tbody tr:first-child {
+        margin-top: 2rem;
+    }
+    
+    .popular_postcodes thead {
+        width: 100%;
+        height: 70px;
+        border-radius: 8px 8px 0px 0px;
+        background: var(--secondary60, #F9C80E);
+        flex-shrink: 0;
+    }
+    .popular_postcodes thead tr .filter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        gap: .5rem;
+    }
+    
+
+    .map {
+        margin: 1rem 2rem;
+    }
+    
+    .map .map_content {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .map .map_content h2 {
+        font-size: 18px;
+    }
+    .map .map_content p {
+        width: 100%;
+        height: 130px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    
+    footer {
+        background: var(--primary110, #00040B);
+        height: 570px;
+    }
+    .footer_container {
+        width: 100%;
+        color: #FFF;
+        padding: 1.5rem 3rem;
+    }
+    .footer_flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .footer_flex .search_postcode h3 {
+        font-family: Open Sans;
+        font-size: 16px;
+        padding-bottom: .5rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+    }
+    .footer_flex .search_postcode a {
+        font-family: Open Sans;
+        font-size: 12px;
+        cursor: pointer;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 10px;
+        padding: .5rem 0;
+        text-decoration: none;
+        color: #FFF;
+    }
+    .footer_flex .find_maps h3 {
+        font-family: Open Sans;
+        font-size: 16px;
+        padding-bottom: .5rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+        margin-top: 1.5rem;
+    }
+    .footer_flex .find_maps a {
+        font-family: Open Sans;
+        font-size: 12px;
+        cursor: pointer;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 12px;
+        padding: .5rem 0;
+        text-decoration: none;
+        color: #FFF;
+    }
+    .footer_flex .legals h3 {
+        font-family: Open Sans;
+        font-size: 16px;
+        padding-bottom: .5rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+        margin-top: 1.5rem;
+    }
+    .footer_flex .legals a {
+        font-family: Open Sans;
+        font-size: 12px;
+        cursor: pointer;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 12px;
+        padding: .5rem 0;
+        text-decoration: none;
+        color: #FFF;
+    }
+    footer .goodstuff {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        color: #FFF;
+        margin: 0;
+        position: relative;
+        height: 150px;
+    }
+    footer .goodstuff p{
+        position: absolute;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 22px;
+        
+        bottom: 0;
+        margin: 0 auto;
+    }
+    footer .goodstuff span {
+        color: var(--navbg);
+    }
+}
+@media(max-width: 376px){
+    header {
+        height: 50px;
+        padding: 0 1.5rem ;
+      }
+      .search {
+        padding: 1rem 1.5rem;
+      }
+      .search-container { /* Adjust as needed */
+        margin: 0 auto;
+        height: 40px;
+    }
+    /* Style for the search input field */
+    .search-input {
+        width: 100%;
+        padding: 8px;
+    }
+    /* Style for the search button */
+    .search-button {
+        padding: 8px 20px;
+    }
+    /* Style for the search icon */
+    .search-icon {
+        padding: 8px;
+    }
+    .search p {
+        font-size: 8px;
+    }
+    
+    .hero {
+        margin: 1rem 1.5rem;
+    }
+    .hero .hero_content p {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        height: 200px;
+    }
+    .hero .hero_content p span {
+        font-size: 14px;
+    }
+
+    .popular_postcodes{
+        margin: 2rem 1.5rem;
+    }
+    .popular_postcodes h2 {
+        color: #000;
+        font-family: Open Sans;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+        text-transform: capitalize;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 20px auto;
+        background: #FFF;
+    }
+    
+    th, td {
+        border: none;
+        text-align: left;
+        padding: .5rem 1rem ;
+    }
+    tbody tr:nth-child(odd) {
+        background: var(--secondary10, #FEF4CF); /* You can change this background color */
+    }
+    tbody tr:first-child {
+        margin-top: 2rem;
+    }
+    
+
+    .map {
+        margin: 1rem 1.5rem;
+    }
+    .map .map_content h2 {
+        font-size: 16px;
+    }
+    .map .map_content p {
+        width: 100%;
+        height: 130px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    
+    footer {
+        background: var(--primary110, #00040B);
+        height: 570px;
+    }
+    .footer_container {
+        width: 100%;
+        color: #FFF;
+        padding: 1.5rem 1.5rem;
+    }
+    footer .goodstuff {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        color: #FFF;
+        margin: 0;
+        position: relative;
+        height: 150px;
+    }
+    footer .goodstuff p{
+        position: absolute;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 22px;
+        bottom: 0;
+        margin: 0 auto;
+    }
+    footer .goodstuff span {
+        color: var(--navbg);
+    }
+}
+@media(max-width: 321px){
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 20px auto;
+        background: #FFF;
+    }
+    
+    th, td {
+        border: none;
+        text-align: left;
+        padding: .5rem .8rem ;
+    }
+    tbody tr:nth-child(odd) {
+        background: var(--secondary10, #FEF4CF); /* You can change this background color */
+    }
+    tbody tr:first-child {
+        margin-top: 2rem;
+    }
+}
