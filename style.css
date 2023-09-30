@@ -62,6 +62,7 @@
   .search-container {
     display: flex;
     align-items: center;
+    position: relative;
     width: 100%; /* Adjust as needed */
     margin: 0 auto;
     height: 69px;
@@ -69,19 +70,29 @@
     background: var(--neutral20, #FAFDFA);
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.08);
 }
+.search-container img{
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    padding-right: 40px;
+}
+.search-container input {
+    padding-left: 104px;
+}
 
 /* Style for the search input field */
 .search-input {
     width: 100%;
     padding: 13px;
-    border: 1px solid #ccc;
+    border: 1px solid #FFF;
     border-radius: 5px 0 0 5px;
     outline: none;
 }
 
 /* Style for the search button */
 .search-button {
-    padding: 13px 30px;
+    padding: 20px 35px;
     background-color: var(--btnbg);
     color: #fff;
     border: 1px solid var(--btnbg);
@@ -554,6 +565,10 @@ footer .goodstuff span {
     .search-input {
         width: 100%;
         padding: 8px;
+        font-size: 16px;
+    }
+    .search-container img {
+        height: 24px;
     }
     /* Style for the search button */
     .search-button {
@@ -563,6 +578,7 @@ footer .goodstuff span {
         border: 1px solid var(--btnbg);
         border-radius: 0 5px 5px 0;
         cursor: pointer;
+        font-size: 16px;
         outline: none;
     }
     /* Style for the search icon */
@@ -778,14 +794,10 @@ footer .goodstuff span {
         margin: 0 auto;
         height: 40px;
     }
-    /* Style for the search input field */
-    .search-input {
-        width: 100%;
-        padding: 8px;
-    }
     /* Style for the search button */
     .search-button {
         padding: 8px 20px;
+        font-size: 12px;
     }
     /* Style for the search icon */
     .search-icon {
@@ -793,6 +805,14 @@ footer .goodstuff span {
     }
     .search p {
         font-size: 8px;
+    }
+    .search-input {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+    }
+    .search-container img {
+        height: 24px;
     }
     
     .hero {
